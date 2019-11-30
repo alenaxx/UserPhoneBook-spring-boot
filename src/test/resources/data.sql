@@ -1,0 +1,1 @@
+insert into test_schema.userr values ('704730fa-2909-4b25-a254-ef5a70046e01', 'test', 'test');
