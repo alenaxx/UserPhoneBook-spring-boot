@@ -1,6 +1,6 @@
 app:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/orderdb
+    jdbc-url: jdbc:postgresql://localhost:5432/recorddb
     username: postgres
     password: password
     pool-size: 30
