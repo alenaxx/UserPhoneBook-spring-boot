@@ -1,16 +1,21 @@
 package com.example.order.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+import javax.validation.constraints.NotNull;
 import java.util.UUID;
-
+import org.springframework.data.annotation.Id;
 public class PhoneRecord {
+    @Id
+    @NotNull
     private UUID id;
+    @NotNull
     private String name;
+    @NotNull
     private String number;
+    @NotNull
     private UUID userId;
 
-    public PhoneRecord(@JsonProperty("id") UUID id,
+   public PhoneRecord(@JsonProperty("id") UUID id,
                        @JsonProperty("name") String name,
                        @JsonProperty("number") String number,
                        @JsonProperty("userId") UUID userId){
@@ -20,10 +25,9 @@ public class PhoneRecord {
         this.userId = userId;
     }
 
-    public PhoneRecord() {
 
-    }
 
+    public PhoneRecord(){}
 
     public UUID getId(){
         return id;
@@ -54,4 +58,6 @@ public class PhoneRecord {
     public void setNumber( String number){
         this.number = number;
     }
+
+
 }

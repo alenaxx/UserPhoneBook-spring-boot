@@ -2,6 +2,7 @@ package com.example.order.dao;
 
 import com.example.order.model.User;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;

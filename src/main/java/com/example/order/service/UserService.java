@@ -52,8 +52,8 @@ public class UserService {
     public  void addPhoneBook(UUID userId, PhoneRecord phoneRecord){
         phoneRecordDao.addPhoneBook(userId,phoneRecord);
     }
-    public void getAllPhoneBook(UUID userId) {
-        phoneRecordDao.getAllPhoneBook(userId);
+    public List<PhoneRecord> getAllPhoneBook(UUID userId) {
+        return phoneRecordDao.getAllPhoneBook(userId);
     }
     public Optional<PhoneRecord> getPhoneBookById(UUID userId, UUID id) {
         return phoneRecordDao.getPhoneBookById(userId,id);
