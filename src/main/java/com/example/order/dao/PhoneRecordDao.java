@@ -19,12 +19,12 @@ public interface PhoneRecordDao {
 
     List<PhoneRecord> getAllPhoneBook(UUID userId);
 
-    Optional<PhoneRecord> getPhoneBookById(UUID userId,UUID id);
+    Optional<PhoneRecord> getPhoneBookById(UUID userId, UUID id);
 
-    int deletePhoneBookById(UUID userId,UUID id);
+    int deletePhoneBookById(UUID userId, UUID id);
 
-    void updatePhoneBookById(UUID userId,UUID id, PhoneRecord PhoneBook);
+    void updatePhoneBookById(UUID userId, UUID id, PhoneRecord PhoneBook);
 
-    Optional<PhoneRecord> getPhoneBookByNumber(UUID userId,String number);
+    Optional<PhoneRecord> getPhoneBookByNumber(UUID userId, String number);
 
 }

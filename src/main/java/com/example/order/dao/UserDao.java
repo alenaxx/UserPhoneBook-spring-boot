@@ -28,7 +28,4 @@ public interface UserDao {
     Optional<User> getUserByName(String name);
 
 
-
-
-
 }

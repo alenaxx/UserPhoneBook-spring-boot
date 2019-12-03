@@ -1,12 +1,17 @@
 package com.example.order.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
+
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
+
 public class User {
-    @Id
-    @NotNull
+
+
     public UUID id;
     @NotNull
     private String name;
