@@ -118,8 +118,9 @@ public class UserControllerTestMVC {
 
     @Test
     public void getUserByNameTest() throws Exception {
-        User user1 = new User("Mark Tven", "+7123");
-        when(userService.getUserByName("Mark Tven")).thenReturn(java.util.Optional.of(user1));
+        List<User> expected = Arrays.asList(new User(UUID.fromString("61f31926-ef83-4a74-a65b-a3f50e43a0d6"), "Mark Tven", "+798508189"));
+        when(userService.getUserByName("Mark Tven"))
+                .thenReturn(expected);
         mvc.perform(MockMvcRequestBuilders
                 .get("/user/user/{name}", "Mark Tven")
                 .accept(MediaType.APPLICATION_JSON))

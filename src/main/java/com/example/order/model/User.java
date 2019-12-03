@@ -31,6 +31,7 @@ public class User {
         this.name = name;
         this.number = number;
     }
+    public User(){}
 
     public UUID getId() {
         return id;
@@ -52,4 +53,7 @@ public class User {
         this.number = number;
     }
 
+    public void setId(UUID id) {
+        this.id=id;
+    }
 }

@@ -32,7 +32,7 @@ public class UserDaoService implements UserDao, PhoneRecordDao {
     private static final String selectUserByIdSql = "SELECT * FROM userr WHERE id =?";
     private static final String deleteUserSql = "DELETE FROM userr WHERE id=?";
     private static final String updateUserSql = "UPDATE userr SET  name = ? , number = ? WHERE id =?";
-    private static final String selectUserByNameSql = "SELECT name, number FROM userr WHERE name LIKE ?";
+    private static final String selectUserByNameSql = "SELECT * FROM userr WHERE name LIKE ?";
 
     private static final String addPhoneRecordSql = "INSERT INTO phoneBook ( id,name,number,userId) VALUES ( ?,?, ?,?)";
     private static final String selectAllPhoneRecordsSql = "SELECT *  FROM phoneBook WHERE userId=?";
@@ -85,9 +85,11 @@ public class UserDaoService implements UserDao, PhoneRecordDao {
     }
 
     @Override
-    public Optional<User> getUserByName(String name) {
+    public List<User> getUserByName(String name) {
+        List<User> users = new ArrayList<>();
         User user = jdbcTemplate.queryForObject(selectUserByNameSql, new Object[]{name}, userRowMapper);
-        return Optional.ofNullable(user);
+        users.add(user);
+        return users;
     }
 
 

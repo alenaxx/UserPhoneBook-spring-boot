@@ -25,7 +25,7 @@ public interface UserDao {
 
     void updateUserById(UUID id, User user);
 
-    Optional<User> getUserByName(String name);
+    List<User> getUserByName(String name);
 
 
 }

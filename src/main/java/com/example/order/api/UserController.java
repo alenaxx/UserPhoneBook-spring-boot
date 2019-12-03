@@ -46,12 +46,12 @@ public class UserController {
     }
 
     @PutMapping(path = "{id}")
-    public void updateUserById(@NotNull @PathVariable("id") UUID id, @Valid @RequestBody User user) { //TODO работает ли NotNull
+    public void updateUserById(@NotNull @PathVariable("id") UUID id, @Valid @RequestBody User user) {
         userService.updateUserById(id, user);
     }
 
     @GetMapping(path = "user/{name}")
-    public Optional<User> getUserByName(@NotNull @PathVariable("name") String name) {
+    public List<User> getUserByName(@NotNull @PathVariable("name") String name) {
         return userService.getUserByName(name);
     }
 

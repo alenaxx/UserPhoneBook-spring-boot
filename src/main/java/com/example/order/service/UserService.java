@@ -45,7 +45,7 @@ public class UserService {
         userDao.updateUserById(id,user);
     }
 
-    public Optional<User> getUserByName(String name){
+    public List<User> getUserByName(String name){
         return  userDao.getUserByName(name);
     }
 
